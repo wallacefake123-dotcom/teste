@@ -19,9 +19,8 @@
               display: ['"Plus Jakarta Sans"', 'sans-serif'],
             },
             colors: {
-              primary: '#3667AA', // Updated Brand Blue
-              primaryDark: '#2B5288', // 20% Less Luminous (Darker)
-              // New Design System Typography Colors
+              primary: '#3667AA', 
+              primaryDark: '#2B5288', 
               typography: {
                 primary: '#1C2230',
                 secondary: '#3A4150',
@@ -29,23 +28,22 @@
                 disabled: '#9BA1AE',
                 inverted: '#F5F7FA'
               },
-              // Map Slate palette to new Typography colors for global consistency
               slate: {
-                900: '#1C2230', // Primary Title
+                900: '#1C2230', 
                 800: '#252B3A',
-                700: '#3A4150', // Secondary Text
-                600: '#3A4150', // Secondary Text (Body)
-                500: '#6F7684', // Tertiary Text
-                400: '#9BA1AE', // Disabled / Muted
+                700: '#3A4150', 
+                600: '#3A4150', 
+                500: '#6F7684', 
+                400: '#9BA1AE', 
                 300: '#CBD5E1',
                 200: '#E2E8F0',
                 100: '#F1F5F9',
-                50: '#F5F7FA', // Inverted/Lightest
+                50: '#F5F7FA', 
               },
-              base: '#F9FAFB', // Background Base
+              base: '#F9FAFB', 
             },
             boxShadow: {
-              'glow': '0 4px 14px 0 rgba(54, 103, 170, 0.39)', // Updated to match #3667AA
+              'glow': '0 4px 14px 0 rgba(54, 103, 170, 0.39)', 
               'glow-hover': '0 6px 20px rgba(54, 103, 170, 0.23)',
               'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
             },
@@ -69,30 +67,30 @@
         background: transparent; 
       }
       ::-webkit-scrollbar-thumb {
-        background: #9BA1AE; /* typography-disabled */
+        background: #9BA1AE; 
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #6F7684; /* typography-tertiary */
+        background: #6F7684; 
       }
       
       /* Global Styles for Design System Adaptation */
       body {
         font-family: 'Plus Jakarta Sans', sans-serif;
-        font-weight: 400; /* Regular for Body (400) */
+        font-weight: 400; 
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        color: #3A4150; /* typography-secondary as default body color */
+        color: #3A4150; 
       }
       
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Plus Jakarta Sans', sans-serif;
-        font-weight: 500; /* Medium (500) for Titles */
-        color: #1C2230; /* typography-primary */
+        font-weight: 500; 
+        color: #1C2230; 
       }
 
       button, .btn {
-        font-weight: 500; /* Medium for Buttons */
+        font-weight: 500; 
       }
 
       /* CUSTOM LOADER STYLES */
@@ -104,7 +102,7 @@
 
       .loader-svg {
         fill: none;
-        stroke: #3667AA; /* Updated to new Primary */
+        stroke: #3667AA; 
         stroke-width: 4; 
         stroke-dasharray: 1, 200;
         stroke-dashoffset: 0;
