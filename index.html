@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cube Car</title>
+    
+    <!-- Fonts: Plus Jakarta Sans (300 Light, 400 Regular, 500 Medium, 600 SemiBold, 700 Bold) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              primary: '#3667AA', // Updated Brand Blue
+              primaryDark: '#2B5288', // 20% Less Luminous (Darker)
+              // New Design System Typography Colors
+              typography: {
+                primary: '#1C2230',
+                secondary: '#3A4150',
+                tertiary: '#6F7684',
+                disabled: '#9BA1AE',
+                inverted: '#F5F7FA'
+              },
+              // Map Slate palette to new Typography colors for global consistency
+              slate: {
+                900: '#1C2230', // Primary Title
+                800: '#252B3A',
+                700: '#3A4150', // Secondary Text
+                600: '#3A4150', // Secondary Text (Body)
+                500: '#6F7684', // Tertiary Text
+                400: '#9BA1AE', // Disabled / Muted
+                300: '#CBD5E1',
+                200: '#E2E8F0',
+                100: '#F1F5F9',
+                50: '#F5F7FA', // Inverted/Lightest
+              },
+              base: '#F9FAFB', // Background Base
+            },
+            boxShadow: {
+              'glow': '0 4px 14px 0 rgba(54, 103, 170, 0.39)', // Updated to match #3667AA
+              'glow-hover': '0 6px 20px rgba(54, 103, 170, 0.23)',
+              'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+            },
+            backgroundImage: {
+              'premium-silver': 'linear-gradient(135deg, #E2E8F0 0%, #FFFFFF 100%)',
+              'brand-gradient': 'linear-gradient(to bottom right, #3667AA, #2B5288)',
+              'footer-gradient': 'linear-gradient(90deg, #F8F9FB 0%, #EEF1F5 100%)',
+            }
+          }
+        }
+      }
+    </script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #9BA1AE; /* typography-disabled */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6F7684; /* typography-tertiary */
+      }
+      
+      /* Global Styles for Design System Adaptation */
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 400; /* Regular for Body (400) */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #3A4150; /* typography-secondary as default body color */
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 500; /* Medium (500) for Titles */
+        color: #1C2230; /* typography-primary */
+      }
+
+      button, .btn {
+        font-weight: 500; /* Medium for Buttons */
+      }
+
+      /* CUSTOM LOADER STYLES */
+      .loader-container {
+        width: 3.25em;
+        transform-origin: center;
+        animation: rotate4 2s linear infinite;
+      }
+
+      .loader-svg {
+        fill: none;
+        stroke: #3667AA; /* Updated to new Primary */
+        stroke-width: 4; 
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+        animation: dash4 1.5s ease-in-out infinite;
+      }
+
+      /* Variant for buttons */
+      .loader-white {
+        stroke: white !important;
+      }
+
+      @keyframes rotate4 {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes dash4 {
+        0% {
+          stroke-dasharray: 1, 150;
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dasharray: 90, 150;
+          stroke-dashoffset: -35px;
+        }
+        100% {
+          stroke-dasharray: 90, 150;
+          stroke-dashoffset: -124px;
+        }
+      }
+      
+      /* Utility for glass effects */
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.0.8?external=react,react-dom"
+  }
+}
+</script>
+</head>
+  <body class="bg-[#F9FAFB] min-h-screen font-sans antialiased selection:bg-blue-100 selection:text-blue-900">
+    <div id="root"></div>
+  </body>
+</html>
