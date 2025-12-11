@@ -19,7 +19,8 @@ jobs:
           node-version: '18' 
 
       - name: Install Dependencies 📦
-        run: npm install
+        # LINHA CORRIGIDA: Adiciona --force para resolver conflitos de dependência (ERESOLVE)
+        run: npm install --force
 
       - name: Build Project 🏗️
         run: npm run build
