@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Copy of Cube Car 21(teste)",
+  "description": "A P2P car sharing SaaS platform powered by Gemini AI with Google Maps grounding for location-aware vehicle discovery.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
